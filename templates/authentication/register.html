@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign up</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static '/authentication/register/register.css' %}">
+</head>
+<body>
+	<main class="main">
+		<form action="" method="POST" class="login_form">
+			{% csrf_token %}
+			{{form}}
+			<!-- {% for field in form %}
+  				{{ field }}
+			{% endfor %} -->
+			<button type="submit" class="submit_button">Sign up</button>
+		</form>
+	</main>
+</body>
+</html>

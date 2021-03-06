@@ -1,0 +1,87 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+html,body{
+	height:100%;
+	width:100%;
+	box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: 'Ubuntu Regular';
+  src: url('/static/authentication/login/fonts/Ubuntu-Regular.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Karla';
+  src: url('/static/authentication/login/fonts/Karla.ttf');
+  font-style: normal;
+}
+body{
+	background-color: #999;
+	background-image: url('/static/authentication/login/pictures/background_stairs_1.jpg');
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: multiply;
+}
+.main{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.login_form{
+	display: grid;
+	justify-content: center;
+	width:40%;
+	color: white;
+	grid-template-columns: 1fr;
+	grid-row-gap:1em;
+}
+
+input{
+	height:4em;
+	padding: 1em;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	font-family: 'Karla';
+	font-size: 16px;
+}
+
+.submit_button{
+	height:2em;
+	color:white;
+	border:none;
+	background: transparent;
+	outline:none;
+	font-family: 'Karla';
+	font-size: 20px;
+	cursor: pointer;
+}
+.submit_button:hover{
+	color:#ddd;
+}
+.footer{
+	position: absolute;
+	bottom: 0;
+	right:0;
+	margin-right: 1vw;
+	margin-bottom: 1vh;
+
+}
+.footer> a{
+	color:white;
+	font-family: 'Karla';
+	font-size: 16px;
+	text-decoration: none;
+
+}
+.footer > a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Log In</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static '/authentication/login/login.css' %}">
+</head>
+<body>
+	<main class="main">
+		<form method="POST" class="login_form">
+
+			{% csrf_token %}
+			{{ form }}
+
+			<button type="submit" class="submit_button">log in</button>
+		</form>
+	</main>
+	<footer class="footer">
+		<a href="/authentication/signup/">don't have an account? create it!</a>
+	</footer>
+</body>
+</html>
