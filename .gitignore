@@ -1,0 +1,10 @@
+.idea
+_pycache_
+/venv
+Get_work_Area.py
+example.py
+.venv
+db.sqlite3
+mydatabase
+.env
+media
