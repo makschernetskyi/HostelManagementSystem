@@ -14,4 +14,17 @@ GUIDE (how to use)
 5. log in
 6. there you are, you can add new hostels, room to them and people to the rooms, i believe interface is user friendly enough
 
+
+
+Technical description:
+
+project is fullstack app, mainly based on python-django (https://www.djangoproject.com), frontend is powered by React.js (https://reactjs.org)
+which is hybridly connected to django project via django views and oportunities given by webpack (https://webpack.js.org)
+
+raw react.js app is located in web_client directory, compiled in main directory.
+
+authentication works separately from react and uses only django authentication thus you can delete and add users by django-admin panel
+other stuff is completely django, you can learn more about it from it's official website https://www.djangoproject.com.
+
+
 ENJOY!!!
