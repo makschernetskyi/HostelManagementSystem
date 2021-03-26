@@ -4,7 +4,11 @@ _pycache_
 Get_work_Area.py
 example.py
 .venv
-db.sqlite3
 mydatabase
 .env
 media
+/uploads
+/node_modules
+.eslintrc.js
+.babelrc
+webpack.config.js

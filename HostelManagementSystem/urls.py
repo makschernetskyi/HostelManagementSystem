@@ -21,6 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^home/$', views.homePage, name="home"),
     re_path(r'^authentication/', include("authentication.urls")),
-    path('api', include("api.urls")),
-    path('', views.redirectToLogin),
+    path('api/', include("api.urls")),
+    re_path(r'',include("main.urls")),
 ]

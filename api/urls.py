@@ -4,8 +4,10 @@ from django.urls import path, include
 
 
 router = routers.DefaultRouter()
-router.register('tenants', views.TenantViewSet)
+router.register(r'tenants', views.TenantViewSet)
+router.register(r'rooms', views.RoomViewSet)
+router.register(r'hostels', views.HostelViewSet)
 
 urlpatterns = [
-	path('', include(router.urls))
+	path('v0/', include(router.urls))
 ]

@@ -23,7 +23,7 @@ from .tokens import account_activation_token
 
 from .forms import UserLoginForm, UserRegisterForm
 
-@user_passes_test(lambda user: not user.username, login_url='/home', redirect_field_name=None)
+@user_passes_test(lambda user: not user.username, login_url='/', redirect_field_name=None)
 @csrf_protect
 def loginPage(request, *args, **kwargs):
 	next = request.GET.get('next')
@@ -34,7 +34,7 @@ def loginPage(request, *args, **kwargs):
 		user = authenticate(username=username, password=password)
 		login(request, user)
 		if next:
-			return redirect('/home')
+			return redirect('/')
 
 	context	 = {
 		'form':form,
@@ -44,7 +44,7 @@ def loginPage(request, *args, **kwargs):
 
 
 
-@user_passes_test(lambda user: not user.username, login_url='/home', redirect_field_name=None)
+@user_passes_test(lambda user: not user.username, login_url='/', redirect_field_name=None)
 @csrf_protect
 def SignUpPage(request, *args, **kwargs):
 

@@ -14,6 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# FRONTEND_DIR = os.path.join(BASE_DIR, '..', 'frontend')
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'main',
     'api',
     'authentication',
     'rest_framework',
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'HostelManagementSystem.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'DIRS': [os.path.join(BASE_DIR,"templates"),os.path.join(BASE_DIR,"main/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -3,8 +3,22 @@ from . import models
 from . import serializers
 
 class TenantViewSet(viewsets.ModelViewSet):
-	queryset = models.Tenant.objects.all();
+	queryset = models.Tenant.objects.all()
 	serializer_class = serializers.TenantsSerializer
+
+class RoomViewSet(viewsets.ModelViewSet):
+	queryset = models.Room.objects.all()
+	serializer_class = serializers.RoomSerializer
+
+class HostelViewSet(viewsets.ModelViewSet):
+	queryset = models.Hostel.objects.all()
+	serializer_class = serializers.HostelSerializer
+
+
+
+
+
+
 
 # class TenantsList(generics.ListCreateAPIView):
 

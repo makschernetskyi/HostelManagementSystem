@@ -1,0 +1,11 @@
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App</title>
+	<script defer src = <%= `"{% static '${(htmlWebpackPlugin.files.js).toString().split('/').pop()}' %}"` %>></script>
+</head>
+<body>
+	<div id="root"></div>
+</body>
+</html>
