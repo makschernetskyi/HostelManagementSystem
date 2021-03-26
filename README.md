@@ -16,7 +16,7 @@ GUIDE (how to use)
 
 
 
-Technical description:
+Architecture description:
 
 project is fullstack app, mainly based on python-django (https://www.djangoproject.com), frontend is powered by React.js (https://reactjs.org)
 which is hybridly connected to django project via django views and oportunities given by webpack (https://webpack.js.org)
