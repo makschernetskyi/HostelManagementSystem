@@ -1,0 +1,1 @@
+export { HostelsList } from './HostelsList.jsx'
