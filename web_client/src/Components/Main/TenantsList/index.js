@@ -1,0 +1,1 @@
+export { TenantsList } from './TenantsList.jsx'

@@ -55,8 +55,8 @@ class Hostel(models.Model):
 	amount_of_beds = models.IntegerField(default = 0)
 	occupated_beds = models.IntegerField(default = 0)
 	about = models.TextField(default = '')
-	rooms = models.ManyToManyField(Room)
-	# Gallery = models.ManyToManyField(Gallery)
+	rooms = models.ManyToManyField(Room, blank=True)
+	# Gallery = models.ManyToManyField(Gallery, blank=True)
 
 
 
