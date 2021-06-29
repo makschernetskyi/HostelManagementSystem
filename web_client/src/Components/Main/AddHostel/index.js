@@ -1,0 +1,1 @@
+export { AddHostel } from './AddHostel.jsx'

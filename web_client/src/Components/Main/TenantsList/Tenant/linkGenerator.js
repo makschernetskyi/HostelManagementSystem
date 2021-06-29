@@ -1,7 +1,7 @@
 
 
 const linkGenerator = (name, id) =>{
-	return `/room/?name=${encodeURI(name)}&id=${id}`;
+	return `/tenant/?name=${encodeURI(name)}&id=${id}`;
 }
 
 

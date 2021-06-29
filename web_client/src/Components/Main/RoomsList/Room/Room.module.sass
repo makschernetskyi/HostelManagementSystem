@@ -1,20 +1,26 @@
-.room-item
-	background: #eee
-	color: #333
+$aquamarin: #024f94
+
+.RoomItem
+	background: white
+	color: $aquamarin
 	padding: 1em
+	border: 2px solid $aquamarin
 	border-radius: 5px
 	cursor: pointer
-	&:nth-child(odd)
-		grid-column: 1/2
-	&:nth-child(even)
-		grid-column: 2/3
-
+	transition: all .2s
+	&:hover
+		border: 0px
+		background: $aquamarin
+		color: #fff
 a
 	text-decoration: none
 
 
-.room-item-field
+.RoomItem_field
 	font-size: 18px
 
-.room-item-header
+.RoomItem_field
 	font-weight: bold
+
+.red
+	color: red

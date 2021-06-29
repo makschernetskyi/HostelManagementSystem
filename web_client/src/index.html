@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>App</title>
+	<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
 	<script defer src = <%= `"{% static '${(htmlWebpackPlugin.files.js).toString().split('/').pop()}' %}"` %>></script>
 </head>
 <body>

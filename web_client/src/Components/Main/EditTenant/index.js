@@ -1,0 +1,1 @@
+export { EditTenant } from './EditTenant.jsx';

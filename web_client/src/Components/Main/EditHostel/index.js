@@ -1,0 +1,1 @@
+export { EditHostel } from './EditHostel.jsx'

@@ -1,0 +1,193 @@
+$aquamarin: #024f94
+$bp-phone: 1000px
+
+.Form
+	grid-column: 2/3
+	grid-row: 1/3
+	display: grid
+	grid-template-colums: 1fr
+	legend
+		font-size: 2em
+		color:#eee
+
+@media (max-width: $bp-phone)
+	.FormInput_label
+		font-size: 2em
+	
+	.FormInput_textInput
+		font-size: 2em
+		&:focus 
+			& + .FormInput_label 
+				justify-content: flex-end
+		&:not(:placeholder-shown)
+			& + .FormInput_label 
+				justify-content: flex-end
+	
+	.FormInput_numberInput
+		font-size: 2em
+		&:focus 
+			& + .FormInput_label 
+				justify-content: flex-end
+		&:not(:placeholder-shown)
+			& + .FormInput_label 
+				justify-content: flex-end
+	
+	.FormInput_dateInput
+		font-size: 2em
+
+@media (min-width: $bp-phone)
+
+	.FormInput_label
+		font-size: 1.5em
+
+
+	.FormInput_textInput
+		font-size: 1.5em
+		& + .FormInput_label
+			&::after
+				content: ":"
+		&:focus 
+			& + .FormInput_label 
+				transform: translateX(-15%)
+		&:not(:placeholder-shown)
+			& + .FormInput_label 
+				transform: translateX(-15%)
+	
+	.FormInput_numberInput
+		font-size: 1.5em
+		& + .FormInput_label
+			&::after
+				content: ":"
+		&:focus 
+			& + .FormInput_label 
+				transform: translateX(-15%)
+		&:not(:placeholder-shown)
+			& + .FormInput_label 
+				transform: translateX(-15%)
+
+	.FormInput_dateInput
+		font-size: 1.5em
+
+.Form__editForm
+	box-sizing: border-box
+	padding-bottom: 1em
+	grid-row-gap: 1em
+	height: 40%
+	grid-template-rows: 1fr 1fr 1fr 1fr
+
+
+.FormInput
+	background: white
+	display: grid
+	grid-template-rows: 1fr
+	grid-template-columns: 1fr
+	box-sizing: border-box
+	border-bottom: 2px solid $aquamarin
+
+.FormInput_textInput
+	height: 100%
+	width: 100%
+	grid-row: 1/2
+	grid-column: 1/2
+	outline: none
+	background-color: transparent
+	border: none
+	display: flex
+	align-items: center
+	box-sizing: border-box
+	padding: 0.3em
+
+
+	
+.FormInput_label
+	height: 100%
+	width: calc(100% - 1em)
+	pointer-events: none
+	color: $aquamarin
+	grid-row: 1/2
+	grid-column: 1/2
+	display: flex
+	padding: 0em 0.5em 0em 0.5em
+	align-items: center
+	z-index: 10
+	transition: all .35s
+
+.FormInput_numberInput
+	height: 100%
+	width: 100%
+	grid-row: 1/2
+	grid-column: 1/2
+	outline: none
+	background-color: transparent
+	border: none
+	display: flex
+	align-items: center
+	padding: 0.5em
+
+
+.FormInput_dateInput
+	height: 100%
+	width: 100%
+	grid-row: 1/2
+	grid-column: 1/2
+	outline: none
+	background-color: transparent
+	border: none
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0.5em
+	& + .FormInput_label 
+		justify-content: center
+
+.FormFileInput_fileInput
+	outline: none
+	align-self: center
+	display: none
+	cursor: pointer
+	background-color: transparent
+	border: 2px solid #ddd
+
+.FormInput_checkBoxInput
+	align-self: center
+
+.FormFileInput_fileInputLabel
+	grid-row: 1/2
+	grid-column: 1/2
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	padding: 1em
+	box-sizing: border-box
+	color: #999
+	cursor: pointer
+
+.FormFileInput_FileImage
+	grid-row: 1/2
+	grid-column: 2/3
+	display: flex
+	align-items: center
+	width: 100%
+	height: 100%
+	
+
+.FormFileInput
+	overflow: hidden
+	background: white
+	display: grid
+	grid-template-rows: 1fr
+	grid-template-columns: 7fr 1fr
+	box-sizing: border-box
+
+.FormSubmitButton
+	justify-self: center
+	border: none
+	border-radius: 10px
+	width: 30%
+	background-color: $aquamarin
+	color: #eee
+	cursor: pointer
+	font-size: 3em
+	transition: all .2s
+	&:hover
+		border-radius: 5px

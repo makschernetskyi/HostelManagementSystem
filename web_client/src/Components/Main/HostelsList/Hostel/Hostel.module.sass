@@ -1,20 +1,27 @@
-.hostel-item
-	background: #eee
-	color: #333
+$aquamarin: #024f94
+	
+.HostelItem
+	background: white
+	color: $aquamarin
 	padding: 1em
+	border: 2px solid $aquamarin
 	border-radius: 5px
 	cursor: pointer
-	&:nth-child(odd)
-		grid-column: 1/2
-	&:nth-child(even)
-		grid-column: 2/3
+	transition: all .2s
+	&:hover
+		border: 0px
+		background: $aquamarin
+		color: #fff
 
 a
 	text-decoration: none
 
-.hostel-item-header
-	font-size: 20px
+.HostelItem_header
+	font-size: 18px
 	font-weight: bold
 
-.hostel-item-field
-	font-size: 20px
+.HostelItem_field
+	font-size: 18px
+
+.red
+	color: red

@@ -1,15 +1,26 @@
-.list-wrapper
-    height: 100%
-    grid-column: 2/3
+.List
+	grid-column: 2/3
+	grid-row: 2/3
 
 
 
 
-.list
-    height: 90vh
-    display: grid
-    grid-template-columns: 1fr 1fr
-    grid-auto-rows: 10em
-    overflow-x: hidden
-    overflow-y: auto
-    grid-gap: 0.5em
+.List_Items
+	height: 95vh
+	padding: 0em 1em 0em 1em
+	display: grid
+	grid-template-columns: 1fr
+	grid-auto-rows: 8em
+	overflow-y: auto
+	grid-gap: 0.5em
+
+.List_FreeSpace
+	grid-column: 1/2
+	background: transparent
+	border: 2px solid #f03
+	border-radius: 5px
+	color: #f03
+	font-size: 25px
+	display: flex
+	padding: 1em
+	align-items: center

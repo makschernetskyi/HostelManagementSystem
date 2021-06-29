@@ -1,0 +1,129 @@
+$aquamarin: #024f94
+$bp-phone: 1000px
+
+.TenantData
+	grid-row: 1/3
+	grid-column: 2/3
+	height: 100%
+	display: grid
+	grid-template-rows: 12vh 12vh 28vh 12vh 12vh 12vh 12vh
+	grid-template-columns: 1fr
+
+.Tenant_Field
+	height: 100%
+	font: 30px Helvetica
+	color: $aquamarin
+	display: flex
+	align-items: center
+
+.Tenant_Field_header
+	color: black
+
+@media (max-width: $bp-phone)
+	.Tenant_Field_passportPhoto_container
+		width: 50vw
+	.Tenant_Field_passportPhoto
+		width: 50vw
+	.Tenant_Field_payButton
+		font-size: 1.3em
+
+@media (min-width: $bp-phone)
+	.Tenant_Field_passportPhoto_container
+		width: 100%
+	.Tenant_Field_passportPhoto
+		height: 100%
+	.Tenant_Field_payButton
+		font-size: 0.5em
+
+
+.Tenant_Field_passportPhoto_container__modalImage
+	position: absolute
+	left: 0
+	top: 0
+	height: 100vh
+	width: 100vw
+	display: flex
+	align-items: center
+	justify-content: center
+	background: rgba(0,0,0,0.7) 
+
+.Tenant_Field_passportPhoto__modalImage
+	max-height: 100vh
+	max-width: 100vw
+	z-index: 100
+	position: absolute
+	display: flex
+
+
+
+.Tenant_Field_payButton
+	background: $aquamarin
+	padding: 1em
+	margin-left: 1em
+	color: white
+	border: none
+	border-radius: 5px
+	outline: none
+	box-sizing: border-box
+
+
+
+.hide
+	display: none
+
+.show
+	display: flex
+
+.Modal
+	left: 0
+	top: 0
+	position: absolute
+	align-items: center
+	justify-content: center
+	height: 100vh
+	width: 100vw
+	background: rgba(0,0,0,0.7) 
+
+.Modal_quitButton
+	position: absolute
+	right: 0
+	top: 0
+	color: white
+	font-size: 4em
+	cursor: pointer
+	&:hover
+		color: #333
+
+.Modal_Content
+	height: 30%
+	width: 30%
+	border: 2px solid white
+	border-radius: 2px
+	color: white
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 2px
+	background: $aquamarin
+
+.Modal_Content_nextPaymentDateInput
+	border: none
+	outline: none
+	height: 3em
+
+.Modal_Content_submitButton
+	background: white
+	color: $aquamarin
+	font-size: 1em
+	padding: 0.4em
+	border: none
+	margin-left: 1em
+	height: 3em
+	width: 3em
+	box-sizing: border-box
+	border-radius: 5px
+	transition: all .2s
+	&:hover
+		color: white
+		background: $aquamarin
+		border: 2px solid white

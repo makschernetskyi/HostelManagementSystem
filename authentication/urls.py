@@ -5,5 +5,6 @@ urlpatterns = [
 	path('', views.redirectToLogin),
     path('login/', views.loginPage, name="login"),
     path('signup/', views.SignUpPage, name="signup"),
+    path('logout/', views.logoutView, name="logout"),
     path('activate/<uidb64>/<token>/', views.ActivateAccount.as_view(), name="activate")
 ]

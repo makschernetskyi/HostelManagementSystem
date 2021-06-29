@@ -7,12 +7,13 @@ const getHostelItems = (hostels) =>{
 		const items = 
 			hostels.map(
 				hostel => {
+					console.log(hostel)
 					return( 
 							<Hostel 
 								name={hostel.name} 
 								adress={hostel.adress} 
 								rooms={hostel.amount_of_rooms} 
-								freeSpace={hostel.amount_of_beds - hostel.occupated_beds} 
+								freeSpace={hostel.free_space} 
 								description={hostel.about}
 								link = {getLink(hostel.name, hostel.id)}
 								key={hostel.id}
@@ -23,7 +24,7 @@ const getHostelItems = (hostels) =>{
 		return items
 	}catch(e){
 		console.error(e);
-		return (<p>Sorry cannot fetch data, Error occured <br/> try later </p>)
+		return (<p>Sorry cannot display data, Error occured <br/> try later </p>)
 	}
 }
 

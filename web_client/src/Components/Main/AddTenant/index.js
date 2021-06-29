@@ -1,0 +1,1 @@
+export { AddTenant } from "./AddTenant.jsx";

@@ -4,33 +4,42 @@ import {NavLink} from 'react-router-dom'
 
 import getLink from './linkGenerator.js'
 
+
+
+const c = (...classes) => {
+	return classes.join(' ');
+}
+
 export const Room = props =>
-		<NavLink to={getLink(props.name, props.id)} className = {styles['room-item']} >
-			<h1 className = {[
-					styles['room-item__name'],
-					styles['room-item-header'],
-					styles['room-item-field']
-				].join(' ')
-			}>
-					{props.name}
+		<NavLink to={getLink(props.name, props.id)} className = {styles.RoomItem} >
+			<h1 className = {c(
+					styles.RoomItem_name,
+					styles.RoomItem_header,
+					styles.RoomItem_field
+			)}>
+
+				{props.name}
 			</h1>
-			<p className = {[
-					styles['room-item__name'],
-					styles['room-item-header']
-				].join(' ')
-			}>
-					{props.number}
+			<p className = {c(
+					styles.RoomItem_name,
+					styles.RoomItem_header
+			)}>
+				room #{props.number}
 			</p>
 			
-			available beds:
-			<div className={[
-					styles['room-item__available__space__status'],
-					styles['room-item-field']
-				].join(' ')
+			occupated beds:
+			<div className={c(
+					styles.RoomItem_availableSpaceStatus,
+					styles.RoomItem_field
+				)
 			}>
-
-					<sup>{props.occupatedBeds}</sup>/<sub>{props.bedsAmount}</sub>
-
+				
+				<p>
+					<span className = {props.occupatedBeds<props.bedsAmount?styles.red:''}>
+						{props.occupatedBeds}
+					</span>/
+					<span>{props.bedsAmount}</span>	
+				</p>
 
 			</div>
 		</NavLink>
